@@ -18,12 +18,8 @@ jobs:
             --output report.log \
             --config="p/default"
 
-      - name: Install GNU tar
-        run: |
-          apk add --no-cache tar
-
       - name: save report as pipeline artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: report.log
+          name: semgrep-report
           path: report.log
