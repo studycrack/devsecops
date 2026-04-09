@@ -1,0 +1,22 @@
+{
+  "app": {
+    "name": "Secret Demo Application",
+    "version": "1.0.0"
+  },
+  "aws": {
+    "accessKeyId": "AKIAI44QH8DHBEXAMPLE",
+    "secretAccessKey": "je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY",
+    "region": "us-west-2"
+  },
+  "stripe": {
+    "secret": "sk_live_test1234567890abcdefghijklmnop",
+    "webhook_secret": "whsec_test1234567890abcdefghijk"
+  },
+  "jwt": {
+    "secret": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+  },
+  "database": {
+    "primary": "mongodb://dbuser:dbpass123@cluster.example.com:27017/production",
+    "replica": "mysql://root:MySecretPassword456@replica.example.com:3306/backup"
+  }
+}
