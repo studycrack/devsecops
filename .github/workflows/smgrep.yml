@@ -1,0 +1,21 @@
+name: Semgrep Full Scan
+on:
+  workflow_dispatch:
+jobs:
+  semgrep-full:
+      runs-on: ubuntu-latest
+      container:
+        image: returntocorp/semgrep
+      steps:
+        - name: clone application source code
+          uses: actions/checkout@v3
+        - name: full scan
+          run: |
+            semgrep \
+              --output report.log \
+              --config="p/default"
+        - name: save report as pipeline artifact
+          uses: actions/upload-pages-artifact@v3
+          with:
+            name: report.log
+            path: report.log
